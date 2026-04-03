@@ -1,160 +1,78 @@
-# 🚀 42gen
+# 42gen (INIT42 Project Starter Generator)
 
-**42gen** is a lightweight CLI tool designed for 42 students to instantly generate clean, norm-compliant project structures — so you can focus on coding, not setup.
+`42gen` is a C command-line generator for 42 school projects. It creates a project skeleton with standard 42 layout and compiles via a one-command build.
 
----
+## ✅ What it generates
 
-## 🧠 Why 42gen?
+Given a project name `myproject`, it creates:
 
-At 42, every project starts the same way:
+- `myproject/`
+  - `src/`
+    - `main.c`
+  - `include/`
+    - `myproject.h`
+  - `Makefile`
 
-* Creating folders (`src/`, `include/`)
-* Writing a Makefile
-* Adding basic files (`main.c`, `.h`)
+Generated Makefile uses:
+- `-Wall -Wextra -Werror`
+- `-Iinclude`
 
-This process is repetitive and error-prone.
+## 📁 Project source structure
 
-👉 **42gen solves this in one command.**
+- `src/main.c` (command line entry)
+- `src/generator.c` (scaffolding functions)
+- `src/utils.c` (helpers)
+- `include/42gen.h` (declarations)
+- `Makefile` (build targets)
+- `README.md`
 
----
-
-## ⚡ Features
-
-* 📁 Auto-generate project structure
-* ⚙️ Ready-to-use Makefile (42 compliant)
-* 🧾 Starter files (`main.c`, headers)
-* 🌿 Optional Git initialization
-* 🎯 Bonus file support
-* 🧠 Beginner-friendly and fast
-
----
-
-## 🛠️ Installation
+## 🛠 Build
 
 ```bash
-git clone https://github.com/yourusername/42gen.git
-cd 42gen
 make
 ```
 
----
-
-## 🚀 Usage
-
-### Basic Command
+## ▶️ Usage
 
 ```bash
 ./42gen <project_name>
 ```
 
-### Example
+Example:
 
 ```bash
 ./42gen minishell
 ```
 
-👉 This will create:
+## 📌 Validations included
 
-```
-minishell/
-├── src/
-├── include/
-├── Makefile
-└── main.c
-```
+- Accept only `[A-Za-z0-9_-]` project names
+- Prevent directory overwrite
+- Use safe functions (`snprintf`, `strncpy`)
+- Cleanup on failure (`unlink`, `rmdir`)
+- `--help` output built-in
 
----
+## 📦 Makefile targets
 
-## ⚙️ Options
+- `make` / `make default`: build the generator
+- `make 42gen`: compile `42gen` binary
+- `make clean`: remove objects
+- `make fclean`: remove objects + binary
+- `make re`: rebuild
+- `make linux` / `make mac` / `make windows`: OS-specific stubs
 
-### 🔹 Add Bonus Files
+## 🔮 Future features
 
-```bash
-./42gen minishell --bonus
-```
-
----
-
-### 🔹 Initialize Git Repository
-
-```bash
-./42gen minishell --git
-```
+- `--bonus` and `--git`
+- norminette template
+- GUI mode (SDL2/webview)
+- Cross-platform installer (Linux/macOS/Windows)
 
 ---
 
-### 🔹 Add Author Name
+## 🤝 Contribution
 
-```bash
-./42gen minishell --author your_login
-```
-
----
-
-### 🔹 Full Command Example
-
-```bash
-./42gen minishell --bonus --git --author your_login
-```
-
----
-
-## 📂 Generated Makefile (Example)
-
-```make
-NAME = minishell
-
-CC = gcc
-CFLAGS = -Wall -Wextra -Werror
-
-SRC = main.c
-
-OBJ = $(SRC:.c=.o)
-
-all: $(NAME)
-
-$(NAME): $(OBJ)
-	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
-
-clean:
-	rm -f $(OBJ)
-
-fclean: clean
-	rm -f $(NAME)
-
-re: fclean all
-```
-
----
-
-## 🧑‍🏫 How It Works
-
-42gen performs these steps internally:
-
-1. Reads project name from arguments
-2. Creates project directory
-3. Generates subfolders (`src`, `include`)
-4. Creates required files
-5. Writes template content inside files
-6. Applies optional features (`--git`, `--bonus`, etc.)
-
----
-
-## 🌟 Why This Project Matters
-
-* Saves time for every 42 student
-* Reduces setup errors
-* Encourages clean project structure
-* Demonstrates system programming skills (file handling, CLI parsing)
-
----
-
-## 🔮 Future Improvements
-
-* 🔧 Norminette auto-check integration
-* 🎨 Custom templates
-* 🌐 Multi-language support
-* 📦 Package installer (brew / apt)
+Fork + PRs welcome.
 
 ---
 
