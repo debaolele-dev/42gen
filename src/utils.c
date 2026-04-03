@@ -21,10 +21,32 @@ void cleanup(const char *project) {
     snprintf(path, sizeof(path), "%s/src/main.c", project);
     unlink(path);
 
+    snprintf(path, sizeof(path), "%s/src/utils.c", project);
+    unlink(path);
+
     snprintf(path, sizeof(path), "%s/include/%s.h", project, project);
     unlink(path);
 
     snprintf(path, sizeof(path), "%s/Makefile", project);
+    unlink(path);
+
+    snprintf(path, sizeof(path), "%s/.gitignore", project);
+    unlink(path);
+
+    snprintf(path, sizeof(path), "%s/author", project);
+    unlink(path);
+
+    snprintf(path, sizeof(path), "%s/README.md", project);
+    unlink(path);
+
+    // Remove minishell-specific files if they exist
+    snprintf(path, sizeof(path), "%s/src/parser.c", project);
+    unlink(path);
+
+    snprintf(path, sizeof(path), "%s/src/executor.c", project);
+    unlink(path);
+
+    snprintf(path, sizeof(path), "%s/src/builtins.c", project);
     unlink(path);
 
     // Remove directories

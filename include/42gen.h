@@ -19,6 +19,11 @@ void cleanup(const char *project);
 int create_dirs(const char *project);
 int create_makefile(const char *project);
 int create_main(const char *project);
+int create_utils(const char *project);
+int create_gitignore(const char *project);
+int create_author(const char *project);
+int create_minishell_files(const char *project);
+int create_readme(const char *project);
 int create_header(const char *project, const char *upper);
 int create_project(const char *project, const char *upper);
 

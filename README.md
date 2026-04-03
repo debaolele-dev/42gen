@@ -9,9 +9,22 @@ Given a project name `myproject`, it creates:
 - `myproject/`
   - `src/`
     - `main.c`
+    - `utils.c` (with common utility functions)
   - `include/`
     - `myproject.h`
   - `Makefile`
+  - `README.md` (comprehensive documentation)
+  - `author` (42 login file)
+  - `.gitignore` (standard C/gitignore patterns)
+
+**Special for minishell projects:**
+- Additional source files: `parser.c`, `executor.c`, `builtins.c`
+- Updated Makefile to compile all files
+- Enhanced README with minishell-specific features
+
+**Git integration:**
+- Automatically initializes git repository
+- Adds all files and creates initial commit
 
 Generated Makefile uses:
 - `-Wall -Wextra -Werror`

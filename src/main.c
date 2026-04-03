@@ -36,6 +36,11 @@ int main(int argc, char *argv[]) {
         return 1;
     }
 
+    // Initialize git repository
+    char git_cmd[512];
+    snprintf(git_cmd, sizeof(git_cmd), "cd %s && git init && git add . && git commit -m \"Initial commit\"", project);
+    system(git_cmd);
+
     printf("✅ Project '%s' created successfully!\n", project);
     printf("👉 Next: cd %s && make\n", project);
     return 0;
