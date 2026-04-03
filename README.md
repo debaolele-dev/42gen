@@ -1,4 +1,4 @@
-# 42gen (INIT42 Project Starter Generator)
+# 42gen (42 Project Starter Generator)
 
 `42gen` is a C command-line generator for 42 school projects. It creates a project skeleton with standard 42 layout and compiles via a one-command build.
 
