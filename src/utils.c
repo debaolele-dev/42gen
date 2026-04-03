@@ -17,14 +17,21 @@ int is_valid_project_name(const char *name) {
 void cleanup(const char *project) {
     char path[512];
 
-    // Remove files first
+    // Remove main files (could be .c or .cpp)
     snprintf(path, sizeof(path), "%s/src/main.c", project);
+    unlink(path);
+
+    snprintf(path, sizeof(path), "%s/src/main.cpp", project);
     unlink(path);
 
     snprintf(path, sizeof(path), "%s/src/utils.c", project);
     unlink(path);
 
+    // Remove header files (could be .h or .hpp)
     snprintf(path, sizeof(path), "%s/include/%s.h", project, project);
+    unlink(path);
+
+    snprintf(path, sizeof(path), "%s/include/%s.hpp", project, project);
     unlink(path);
 
     snprintf(path, sizeof(path), "%s/Makefile", project);
@@ -47,6 +54,70 @@ void cleanup(const char *project) {
     unlink(path);
 
     snprintf(path, sizeof(path), "%s/src/builtins.c", project);
+    unlink(path);
+
+    // Remove push_swap-specific files if they exist
+    snprintf(path, sizeof(path), "%s/src/sort.c", project);
+    unlink(path);
+
+    snprintf(path, sizeof(path), "%s/src/stack_ops.c", project);
+    unlink(path);
+
+    // Remove cub3d-specific files if they exist
+    snprintf(path, sizeof(path), "%s/src/render.c", project);
+    unlink(path);
+
+    snprintf(path, sizeof(path), "%s/src/map.c", project);
+    unlink(path);
+
+    // Remove ft_printf-specific files if they exist
+    snprintf(path, sizeof(path), "%s/src/ft_printf.c", project);
+    unlink(path);
+
+    // Remove gnl-specific files if they exist
+    snprintf(path, sizeof(path), "%s/src/get_next_line.c", project);
+    unlink(path);
+
+    // Remove so_long-specific files if they exist
+    snprintf(path, sizeof(path), "%s/src/game.c", project);
+    unlink(path);
+
+    snprintf(path, sizeof(path), "%s/src/map_parser.c", project);
+    unlink(path);
+
+    // Remove philosophers-specific files if they exist
+    snprintf(path, sizeof(path), "%s/src/philosopher.c", project);
+    unlink(path);
+
+    snprintf(path, sizeof(path), "%s/src/monitor.c", project);
+    unlink(path);
+
+    // Remove ft_irc-specific files if they exist
+    snprintf(path, sizeof(path), "%s/src/server.c", project);
+    unlink(path);
+
+    snprintf(path, sizeof(path), "%s/src/commands.c", project);
+    unlink(path);
+
+    // Remove webserv-specific files if they exist
+    snprintf(path, sizeof(path), "%s/src/server.cpp", project);
+    unlink(path);
+
+    snprintf(path, sizeof(path), "%s/src/request.cpp", project);
+    unlink(path);
+
+    // Remove cpp-specific files if they exist
+    snprintf(path, sizeof(path), "%s/src/main.cpp", project);
+    unlink(path);
+
+    snprintf(path, sizeof(path), "%s/src/%s.cpp", project, project);
+    unlink(path);
+
+    // Remove header files
+    snprintf(path, sizeof(path), "%s/include/%s.h", project, project);
+    unlink(path);
+
+    snprintf(path, sizeof(path), "%s/include/%s.hpp", project, project);
     unlink(path);
 
     // Remove directories

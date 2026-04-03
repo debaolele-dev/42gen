@@ -17,10 +17,17 @@ Given a project name `myproject`, it creates:
   - `author` (42 login file)
   - `.gitignore` (standard C/gitignore patterns)
 
-**Special for minishell projects:**
-- Additional source files: `parser.c`, `executor.c`, `builtins.c`
-- Updated Makefile to compile all files
-- Enhanced README with minishell-specific features
+**Special project templates:**
+- **minishell**: Creates `parser.c`, `executor.c`, `builtins.c`
+- **push_swap**: Creates `sort.c`, `stack_ops.c`
+- **cub3d**: Creates `render.c`, `map.c`
+- **ft_printf**: Creates `ft_printf.c`
+- **get_next_line/gnl**: Creates `get_next_line.c`
+- **so_long**: Creates `game.c`, `map_parser.c`
+- **philosophers/philo**: Creates `philosopher.c`, `monitor.c`
+- **ft_irc/irc**: Creates `server.c`, `commands.c`
+- **webserv**: Creates `server.cpp`, `request.cpp` (C++)
+- **cpp/module**: Creates `main.cpp`, `class.cpp` (C++)
 
 **Git integration:**
 - Automatically initializes git repository
@@ -54,7 +61,17 @@ make
 Example:
 
 ```bash
-./42gen minishell
+./42gen minishell     # Full minishell template
+./42gen push_swap     # Push swap with sorting algorithms
+./42gen cub3d         # Cub3D with rendering engine
+./42gen ft_printf     # Printf implementation
+./42gen gnl           # Get next line project
+./42gen so_long       # 2D game project
+./42gen philosophers  # Dining philosophers problem
+./42gen ft_irc        # IRC server project
+./42gen webserv       # Web server (C++)
+./42gen cpp_module01  # C++ module template
+./42gen myproject     # Basic project (default)
 ```
 
 ## 📌 Validations included

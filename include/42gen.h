@@ -23,7 +23,15 @@ int create_utils(const char *project);
 int create_gitignore(const char *project);
 int create_author(const char *project);
 int create_minishell_files(const char *project);
-int create_readme(const char *project);
+int create_push_swap_files(const char *project);
+int create_cub3d_files(const char *project);
+int create_ft_printf_files(const char *project);
+int create_gnl_files(const char *project);
+int create_so_long_files(const char *project);
+int create_philosophers_files(const char *project);
+int create_ft_irc_files(const char *project);
+int create_webserv_files(const char *project);
+int create_cpp_files(const char *project);
 int create_header(const char *project, const char *upper);
 int create_project(const char *project, const char *upper);
 
