@@ -1,14 +1,10 @@
-Here’s a **clean, professional, and attractive README.md** you can use for your project **INIT42** 👇
+# 🚀 42gen
+
+**42gen** is a lightweight CLI tool designed for 42 students to instantly generate clean, norm-compliant project structures — so you can focus on coding, not setup.
 
 ---
 
-# 🚀 INIT42
-
-**INIT42** is a lightweight CLI tool designed for 42 students to instantly generate clean, norm-compliant project structures — so you can focus on coding, not setup.
-
----
-
-## 🧠 Why INIT42?
+## 🧠 Why 42gen?
 
 At 42, every project starts the same way:
 
@@ -18,7 +14,7 @@ At 42, every project starts the same way:
 
 This process is repetitive and error-prone.
 
-👉 **INIT42 solves this in one command.**
+👉 **42gen solves this in one command.**
 
 ---
 
@@ -36,8 +32,8 @@ This process is repetitive and error-prone.
 ## 🛠️ Installation
 
 ```bash
-git clone https://github.com/yourusername/init42.git
-cd init42
+git clone https://github.com/yourusername/42gen.git
+cd 42gen
 make
 ```
 
@@ -48,13 +44,13 @@ make
 ### Basic Command
 
 ```bash
-./init42 <project_name>
+./42gen <project_name>
 ```
 
 ### Example
 
 ```bash
-./init42 minishell
+./42gen minishell
 ```
 
 👉 This will create:
@@ -74,7 +70,7 @@ minishell/
 ### 🔹 Add Bonus Files
 
 ```bash
-./init42 minishell --bonus
+./42gen minishell --bonus
 ```
 
 ---
@@ -82,7 +78,7 @@ minishell/
 ### 🔹 Initialize Git Repository
 
 ```bash
-./init42 minishell --git
+./42gen minishell --git
 ```
 
 ---
@@ -90,7 +86,7 @@ minishell/
 ### 🔹 Add Author Name
 
 ```bash
-./init42 minishell --author your_login
+./42gen minishell --author your_login
 ```
 
 ---
@@ -98,7 +94,7 @@ minishell/
 ### 🔹 Full Command Example
 
 ```bash
-./init42 minishell --bonus --git --author your_login
+./42gen minishell --bonus --git --author your_login
 ```
 
 ---
@@ -133,7 +129,7 @@ re: fclean all
 
 ## 🧑‍🏫 How It Works
 
-INIT42 performs these steps internally:
+42gen performs these steps internally:
 
 1. Reads project name from arguments
 2. Creates project directory
